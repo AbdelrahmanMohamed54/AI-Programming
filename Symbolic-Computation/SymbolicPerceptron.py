@@ -320,6 +320,7 @@ trainset = [
 ]
 
 
+
 # Create and train a perceptron with the sigmoid activation function
 ninp = 2  # Number of inputs
 rng = np.random.default_rng()
@@ -330,4 +331,3 @@ perceptron.train(trainset)
 # Uncomment below lines to use the linear activation function instead
 # perceptron = P(ninp, linear, initial_weights)
 # perceptron.train(trainset)
-
