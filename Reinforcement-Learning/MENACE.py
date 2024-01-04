@@ -206,6 +206,7 @@ def play_match(menace, menace2):
     print("Game Over.")
 
 
+# My Menace system can play against another MENACE system
 """
 if __name__ == "__main__":
     # Assuming menace1 is my MENACE and menace2 is my friend's MENACE
