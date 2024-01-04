@@ -1,4 +1,15 @@
 """
+Exercise 1
+There are three persons of different nationalities (Australian, Brazilian, German), having different pets (Cats, Dogs,
+Fishes), preferring different sports (Basketball, Football, Soccer), each living in a house of a different colour (Blue,
+Green, Red). Use Z3 to implement the following constraints:
+• The Brazilian does not live in house two.
+• The person with the Dogs plays Basketball.
+• There is one house between the house of the person who plays Football and the Red house on the right.
+• The person with the Fishes lives directly to the left of the person with the Cats.
+• The person with the Dogs lives directly to the right of the Green house.
+• The German lives in house three.
+
 # Exercise 1
 
 from z3 import *
@@ -47,6 +58,20 @@ Red = 3,
 Ger = 1]
 """
 
+
+"""
+Exercise 2
+There are four persons of different nationalities (American, British, Canadian, Irish), having different pets (butterflies,
+dolphins, horses, turtles), preferring different sports (bowling, handball, swimming, tennis), each living in a
+house of a different colour (black, blue, red, white). Use Z3 to implement the following constraints:
+• There are two houses between the person who likes Bowling and the person who likes Swimming.
+– There is one house between the Irish and the person who likes Handball on the left.
+– The second house is Black.
+– There is one house between the person who likes Horses and the Red house on the right.
+– The American lives directly to the left of the person who likes Turtles.
+– The person who likes Bowling lives somewhere to the right of the person who likes Tennis.
+– There is one house between the person who likes Handball and the White house on the right.
+"""
 # Exercise 2
 
 from z3 import *
