@@ -1,6 +1,6 @@
 # AI-Programming
 
-This repository contains a collection of algorithms implemented in Python for solving various types of puzzles, including mazes, the N-puzzle (sliding puzzle), and Sudoku puzzles. The implementations use classical search algorithms like Breadth-First Search (BFS), Depth-First Search (DFS), and A* Search.
+This repository showcases a diverse collection of Python-based algorithms tailored for solving a variety of puzzles and computational problems. Ranging from classic puzzles like mazes and Sudoku to more advanced concepts in artificial intelligence like neural networks and symbolic computation, this collection serves as a valuable resource for understanding different algorithms and their applications.
 
 ## Table of Contents
 
@@ -32,13 +32,17 @@ Make sure you have python installed in your machine.
 python Maze.py
 ```
 
-### Features
+---
+
+## Features
+
+### SearchProblems:
 
 #### 1. Maze Solver (`Maze.py`)
    - **Description**: Implements the Breadth-First Search (BFS) algorithm to find the shortest path through a maze, represented as a 2D grid.
    - **Functionality**: Solves mazes with walls, open paths, and a specified goal.
   
-#### 2. Sliding Puzzle Solver (`PuzzleSolver.py`)
+#### 2. Sliding Puzzle Solver (`Sliding_Tiles_A_Star.py`)
    - **Description**: Uses the A* search algorithm to solve N x N sliding puzzles.
    - **Functionality**: Arranges numbered tiles to achieve a specific goal state.
 
@@ -54,17 +58,27 @@ python Maze.py
    - **Description**: Utilizes the A* search algorithm for solving Sudoku puzzles.
    - **Functionality**: Fills a 9x9 grid following Sudoku rules, ensuring each row, column, and 3x3 subgrid contains all digits from 1 to 9.
 
+### Reinforcement-Learning: 
+
 #### 6. Tic-Tac-Toe Learning Algorithm (`MENACE.py`)
    - **Description**: Implements the MENACE (Matchbox Educable Noughts and Crosses Engine) for playing and learning Tic-Tac-Toe.
    - **Functionality**: Uses reinforcement learning to enhance gameplay strategy over time.
+   - 
+#### 7. Q-Learning for Tic-Tac-Toe (Q-learning.py)
+   - **Description**: Implements the Q-learning algorithm for training an agent to play Tic-Tac-Toe.
+   - **Functionality**: Trains through self-play and then allows a human player to challenge the AI agent.
 
-#### 7. Basic Perceptron Implementation (`Simple_perceptron.py`)
+### Perceptrons:
+
+#### 8. Basic Perceptron Implementation (`Simple_perceptron.py`)
    - **Description**: Demonstrates the training of a basic Perceptron for digit recognition.
    - **Functionality**: Recognizes patterns in data using a generated dataset of noisy samples.
 
-#### 8. Sigmoidal Perceptron (`Sigmoid_perceptron.py`)
+#### 9. Sigmoidal Perceptron (`Sigmoid_perceptron.py`)
    - **Description**: Extends the basic Perceptron model with a sigmoid activation function.
    - **Functionality**: Handles more complex patterns for digit recognition, training with noisy samples.
+
+### Symbolic-Computation:
 
 #### 9. Symbolic Computation (`Symbolic_computation.py`)
    - **Description**: Provides a framework for symbolic computation in algebraic expressions.
@@ -74,10 +88,13 @@ python Maze.py
    - **Description**: Merges symbolic computation with perceptron mechanics.
    - **Functionality**: Manipulates expressions in perceptron operations for a deeper understanding of neural networks.
 
+### SAT-SMT:
+
 #### 11. Logical Puzzle Solver (`SAT-SMT.py`)
    - **Description**: Solves complex logical puzzles using the Z3 SMT solver.
    - **Functionality**: Handles relationships between different sets of variables under constraints.
 
+---
 
 ## Contributing
 
