@@ -32,14 +32,52 @@ Make sure you have python installed in your machine.
 python Maze.py
 ```
 
-## Features
+### Features
 
-### Search Problems:
-- **Maze Solver**: Implementation of BFS to find the shortest path in a maze.
-- **N-Puzzle Solver**: Solver for the N×N sliding puzzle using DFS, BFS and A* search algorithms.
-- **Sudoku Solver**: An A* search-based solver for Sudoku puzzles with a heuristic based on the count of empty cells.
+#### 1. Maze Solver (`Maze.py`)
+   - **Description**: Implements the Breadth-First Search (BFS) algorithm to find the shortest path through a maze, represented as a 2D grid.
+   - **Functionality**: Solves mazes with walls, open paths, and a specified goal.
+  
+#### 2. Sliding Puzzle Solver (`PuzzleSolver.py`)
+   - **Description**: Uses the A* search algorithm to solve N x N sliding puzzles.
+   - **Functionality**: Arranges numbered tiles to achieve a specific goal state.
 
-(Expand on the above with more details if necessary.)
+#### 3. Depth-First Search for Sliding Tiles (`Sliding_Tiles_DFS.py`)
+   - **Description**: Applies the Depth-First Search (DFS) algorithm to solve N x N sliding tile puzzles.
+   - **Functionality**: Handles the challenge of rearranging numbered tiles in a grid format.
+
+#### 4. BFS for Sliding Tiles (`BreadthFirstSearch_SlidingTiles.py`)
+   - **Description**: Implements Breadth-First Search (BFS) to solve sliding tile puzzles in an N x N grid.
+   - **Functionality**: Finds the shortest path to arrange tiles in a specified sequence.
+
+#### 5. Sudoku Solver (`sudoku.py`)
+   - **Description**: Utilizes the A* search algorithm for solving Sudoku puzzles.
+   - **Functionality**: Fills a 9x9 grid following Sudoku rules, ensuring each row, column, and 3x3 subgrid contains all digits from 1 to 9.
+
+#### 6. Tic-Tac-Toe Learning Algorithm (`MENACE.py`)
+   - **Description**: Implements the MENACE (Matchbox Educable Noughts and Crosses Engine) for playing and learning Tic-Tac-Toe.
+   - **Functionality**: Uses reinforcement learning to enhance gameplay strategy over time.
+
+#### 7. Basic Perceptron Implementation (`Simple_perceptron.py`)
+   - **Description**: Demonstrates the training of a basic Perceptron for digit recognition.
+   - **Functionality**: Recognizes patterns in data using a generated dataset of noisy samples.
+
+#### 8. Sigmoidal Perceptron (`Sigmoid_perceptron.py`)
+   - **Description**: Extends the basic Perceptron model with a sigmoid activation function.
+   - **Functionality**: Handles more complex patterns for digit recognition, training with noisy samples.
+
+#### 9. Symbolic Computation (`Symbolic_computation.py`)
+   - **Description**: Provides a framework for symbolic computation in algebraic expressions.
+   - **Functionality**: Facilitates handling and differentiation of algebraic expressions.
+
+#### 10. Symbolic Perceptron (`SymbolicPerceptron.py`)
+   - **Description**: Merges symbolic computation with perceptron mechanics.
+   - **Functionality**: Manipulates expressions in perceptron operations for a deeper understanding of neural networks.
+
+#### 11. Logical Puzzle Solver (`SAT-SMT.py`)
+   - **Description**: Solves complex logical puzzles using the Z3 SMT solver.
+   - **Functionality**: Handles relationships between different sets of variables under constraints.
+
 
 ## Contributing
 
