@@ -13,8 +13,6 @@ This repository showcases a diverse collection of Python-based algorithms tailor
 
 ## Installation
 
-(Provide detailed steps on how to install the project. Include code blocks for cloning the repository and any other necessary commands.)
-
 ```bash
 # Clone the repository
 git clone https://github.com/AbdelrahmanMohamed54/AI-Programming
