@@ -216,22 +216,26 @@ def trial12():
     one_lady = Sum([If(rs[i] == 1, 1, 0) for i in range(9)]) == 1
 
     # Define the signs
+    # Note: Sign3 and Sign5 use other signs which are defined later. Use placeholder variables for now.
     sign1 = rs[0] == 1  # The lady is in an odd-numbered room
     sign2 = rs[1] == 2  # This room is empty
-    sign3 = Or(sign5, Not(sign7))  # Either Sign V is right or Sign VII is wrong
+    sign3_placeholder = Bool("sign3_placeholder")
     sign4 = Not(sign1)  # Sign I is wrong
-    sign5 = Or(sign2, sign4)  # Either Sign II or Sign IV is right
-    sign6 = Not(sign3)  # Sign III is wrong
+    sign5_placeholder = Bool("sign5_placeholder")
+    sign6 = Not(sign3_placeholder)  # Sign III is wrong
     sign7 = rs[0] != 1  # The lady is not in Room I
     sign8 = And(rs[7] == 0, rs[8] == 2)  # This room contains a tiger and Room IX is empty
     sign9 = And(rs[8] == 0, sign6)  # This room contains a tiger and VI is wrong
 
+    # Update placeholders with actual definitions
+    sign3 = Or(sign5_placeholder, Not(sign7))  # Either Sign V is right or Sign VII is wrong
+    sign5 = Or(sign2, sign4)  # Either Sign II or Sign IV is right
+
     # Define conditions for each room's sign
     sign_cond = [
-        Implies(rs[i] == 1, signs[i]),  # If the room has a lady, the sign is true
-        Implies(rs[i] == 0, Not(signs[i]))  # If the room has a tiger, the sign is false
-        # Sign on empty rooms can be either true or false, no additional constraints needed
-        for i, signs in enumerate([sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8, sign9])
+        Implies(rs[i] == 1, sign) for i, sign in enumerate([sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8, sign9])
+    ] + [
+        Implies(rs[i] == 0, Not(sign)) for i, sign in enumerate([sign1, sign2, sign3, sign4, sign5, sign6, sign7, sign8, sign9])
     ]
 
     # Solver setup
@@ -242,5 +246,24 @@ def trial12():
 
     return s
 
+def run_trial(trial_func):
+    """ Run the given trial function and return the result. """
+    s = trial_func()
+    if s.check() == sat:
+        return s.model()
+    else:
+        return "No solution"
 
 
+print(run_trial(trial1))
+print(run_trial(trial2))
+print(run_trial(trial3))
+print(run_trial(trial4))
+print(run_trial(trial5))
+print(run_trial(trial6))
+print(run_trial(trial7))
+print(run_trial(trial8))
+print(run_trial(trial9))
+print(run_trial(trial10))
+print(run_trial(trial11))
+print(run_trial(trial12))
